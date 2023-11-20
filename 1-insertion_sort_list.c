@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
-  *instertion_sort_list - it does insertion algorithm
+  *insertion_sort_list - it does insertion algorithm
   *@list: the list to sort
   */
 void insertion_sort_list(listint_t **list)
@@ -16,7 +16,7 @@ void insertion_sort_list(listint_t **list)
 	{
 		next_node = current->next;
 		if (sorted == NULL || sorted->n >= current->n)
-        	{
+		{
 			current->prev = NULL;
 			current->next = sorted;
 			if (sorted != NULL)
