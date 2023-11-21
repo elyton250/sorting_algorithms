@@ -1,0 +1,14 @@
+#include "sort.h"
+
+// array divider that is recursive
+if len(array) > 1
+	if len(array) / 2 == 0
+		divide at len(array)/2
+	else
+		divide at len(array) / 2 - 1
+// divide intp i and j
+
+// array merger that is recursive
+if arry[i] > array[j]
+	swap()
+	copy to parent array

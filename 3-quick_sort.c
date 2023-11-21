@@ -24,7 +24,7 @@ void quick_sort(int *array, size_t size)
 	if (array == NULL || size < 2)
 		return;
 
-	recur(array, 0, size - 1);
+	recur(array, 0, size - 1), size;
 }
 
 /**
@@ -39,7 +39,7 @@ void recur(int *array, int low, int high)
 
 	if (low < high)
 	{
-		pi = partition(array, low, high);
+		pi = partition(array, low, high, size);
 
 		recur(array, low, pi - 1);
 		recur(array, pi + 1, high);
@@ -56,7 +56,6 @@ int partition(int *array, int low, int high)
 {
 	int i = low - 1;
 	int j;
-	/*size_t size = high - low + 1;*/
 
 	int p_value = array[high];
 
@@ -68,12 +67,12 @@ int partition(int *array, int low, int high)
 			if (i != j)
 			{
 				swap(&array[i], &array[j]);
-				print_array(array, high + 1);
+				//print_array(array, size);
 			}
 		}
 	}
 	swap(&array[i + 1], &array[j]);
-	print_array(array, high + 1);
+	//print_array(array, size);
 	
 	return (i + 1);
 }
